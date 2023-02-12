@@ -1,0 +1,24 @@
+---
+title: "EDA"
+output: html_document
+date: "2023-02-12"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data
+
+```{r}
+source("lib/data_split_merge.R")
+
+# load GSE113576 Matrix data
+mat = matrixDataMerge("raw/GSE113576_matrix")
+mat[1:10, 1:10]
+
+# load Merfish all cells data
+df = csvDataMerge("raw/Moffitt_and_Bambah-Mukku_et_al_merfish_all_cells")
+head(df, 3)
+```
+

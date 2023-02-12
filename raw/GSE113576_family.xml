@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<MINiML
+   xmlns="http://www.ncbi.nlm.nih.gov/geo/info/MINiML"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.ncbi.nlm.nih.gov/geo/info/MINiML http://www.ncbi.nlm.nih.gov/geo/info/MINiML.xsd"
+   version="0.5.0" >
+
+  <Contributor iid="contrib1">
+    <Person><First>Xiaowei</First><Last>Zhuang</Last></Person>
+    <Email>zhuang@chemistry.harvard.edu</Email>
+    <Phone>617-384-9818</Phone>
+    <Laboratory>Zhuang</Laboratory>
+    <Department>Chemistry and Chemical Biology</Department>
+    <Organization>Harvard University</Organization>
+    <Address>
+      <Line>12 Oxford St</Line>
+      <City>Cambridge</City>
+      <State>MA</State>
+      <Zip-Code>02138</Zip-Code>
+      <Country>USA</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib2">
+    <Organization>GEO</Organization>
+    <Address>
+      <City></City>
+      <Country>USA</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib3">
+    <Person><First>Catherine</First><Last>Dulac</Last></Person>
+  </Contributor>
+
+  <Database iid="GEO">
+    <Name>Gene Expression Omnibus (GEO)</Name>
+    <Public-ID>GEO</Public-ID>
+    <Organization>NCBI NLM NIH</Organization>
+    <Web-Link>http://www.ncbi.nlm.nih.gov/geo</Web-Link>
+    <Email>geo@ncbi.nlm.nih.gov</Email>
+  </Database>
+
+  <Platform iid="GPL19057">
+    <Status database="GEO">
+      <Submission-Date>2014-08-07</Submission-Date>
+      <Release-Date>2014-08-07</Release-Date>
+      <Last-Update-Date>2019-03-25</Last-Update-Date>
+    </Status>
+    <Title>Illumina NextSeq 500 (Mus musculus)</Title>
+    <Accession database="GEO">GPL19057</Accession>
+    <Technology>high-throughput sequencing</Technology>
+    <Distribution>virtual</Distribution>
+    <Organism taxid="10090">Mus musculus</Organism>
+    <Manufacturer></Manufacturer>
+    <Manufacture-Protocol>
+    </Manufacture-Protocol>
+    <Contact-Ref ref="contrib2" />
+  </Platform>
+
+  <Sample iid="GSM3109253">
+    <Status database="GEO">
+      <Submission-Date>2018-04-24</Submission-Date>
+      <Release-Date>2018-11-01</Release-Date>
+      <Last-Update-Date>2018-11-01</Last-Update-Date>
+    </Status>
+    <Title>scRNAseq of cells from the preoptic region of a pool of three female mice: Replicate 1</Title>
+    <Accession database="GEO">GSM3109253</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Preoptic region of the hypothalamus</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+brain
+      </Characteristics>
+      <Characteristics tag="brain region">
+Preoptic region of the hypothalamus
+      </Characteristics>
+      <Characteristics tag="Sex">
+female
+      </Characteristics>
+      <Treatment-Protocol>
+Mice were housed individually for 3 days prior to sampling
+      </Treatment-Protocol>
+      <Growth-Protocol>
+Mice were between 60 and 70 PND
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+The preoptic region of the hypothalamus was dissected from freshly prepared brains, dissociated into individual cells via protease treatement, FACS sorted to enrich live cells, and then prepared using the 10X Chromium protocols.
+Libraries were constructed following the instructions of the 10xGenomics Chromium platform
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Processed data are contained with the matrix.mtx file and correspond to all cell names that end with -1
+    </Description>
+    <Data-Processing>
+Construction of fastq files using cellranger (v2.0.0) mkfastq command
+Alignment of files to reference genome using cellranger (v2.0.0) count
+Aggregation of multiple samples using cellranger (v2.0.0) aggr
+Genome_build: mm10-1.2.0
+Supplementary_files_format_and_content: matrix.mtx contains the aggreggated counts from all samples
+barcodes.tsv contains the name associated with each cell for all samples. The order is the same as the order of entries in matrix.mtx
+genes.tsv contains the name associated with each measured gene. The order is the same as the order of entries in matrix.mtx
+    </Data-Processing>
+    <Platform-Ref ref="GPL19057" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NextSeq 500</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN08975395" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX3989977" />
+  </Sample>
+
+  <Sample iid="GSM3109254">
+    <Status database="GEO">
+      <Submission-Date>2018-04-24</Submission-Date>
+      <Release-Date>2018-11-01</Release-Date>
+      <Last-Update-Date>2018-11-01</Last-Update-Date>
+    </Status>
+    <Title>scRNAseq of cells from the preoptic region of a pool of three female mice: Replicate 2</Title>
+    <Accession database="GEO">GSM3109254</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Preoptic region of the hypothalamus</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+brain
+      </Characteristics>
+      <Characteristics tag="brain region">
+Preoptic region of the hypothalamus
+      </Characteristics>
+      <Characteristics tag="Sex">
+female
+      </Characteristics>
+      <Treatment-Protocol>
+Mice were housed individually for 3 days prior to sampling
+      </Treatment-Protocol>
+      <Growth-Protocol>
+Mice were between 60 and 70 PND
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+The preoptic region of the hypothalamus was dissected from freshly prepared brains, dissociated into individual cells via protease treatement, FACS sorted to enrich live cells, and then prepared using the 10X Chromium protocols.
+Libraries were constructed following the instructions of the 10xGenomics Chromium platform
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Processed data are contained with the matrix.mtx file and correspond to all cell names that end with -2
+    </Description>
+    <Data-Processing>
+Construction of fastq files using cellranger (v2.0.0) mkfastq command
+Alignment of files to reference genome using cellranger (v2.0.0) count
+Aggregation of multiple samples using cellranger (v2.0.0) aggr
+Genome_build: mm10-1.2.0
+Supplementary_files_format_and_content: matrix.mtx contains the aggreggated counts from all samples
+barcodes.tsv contains the name associated with each cell for all samples. The order is the same as the order of entries in matrix.mtx
+genes.tsv contains the name associated with each measured gene. The order is the same as the order of entries in matrix.mtx
+    </Data-Processing>
+    <Platform-Ref ref="GPL19057" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NextSeq 500</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN08975394" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX3989978" />
+  </Sample>
+
+  <Sample iid="GSM3109255">
+    <Status database="GEO">
+      <Submission-Date>2018-04-24</Submission-Date>
+      <Release-Date>2018-11-01</Release-Date>
+      <Last-Update-Date>2018-11-01</Last-Update-Date>
+    </Status>
+    <Title>scRNAseq of cells from the preoptic region of a pool of three female mice: Replicate 3</Title>
+    <Accession database="GEO">GSM3109255</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Preoptic region of the hypothalamus</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+brain
+      </Characteristics>
+      <Characteristics tag="brain region">
+Preoptic region of the hypothalamus
+      </Characteristics>
+      <Characteristics tag="Sex">
+female
+      </Characteristics>
+      <Treatment-Protocol>
+Mice were housed individually for 3 days prior to sampling
+      </Treatment-Protocol>
+      <Growth-Protocol>
+Mice were between 60 and 70 PND
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+The preoptic region of the hypothalamus was dissected from freshly prepared brains, dissociated into individual cells via protease treatement, FACS sorted to enrich live cells, and then prepared using the 10X Chromium protocols.
+Libraries were constructed following the instructions of the 10xGenomics Chromium platform
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Processed data are contained with the matrix.mtx file and correspond to all cell names that end with -3
+    </Description>
+    <Data-Processing>
+Construction of fastq files using cellranger (v2.0.0) mkfastq command
+Alignment of files to reference genome using cellranger (v2.0.0) count
+Aggregation of multiple samples using cellranger (v2.0.0) aggr
+Genome_build: mm10-1.2.0
+Supplementary_files_format_and_content: matrix.mtx contains the aggreggated counts from all samples
+barcodes.tsv contains the name associated with each cell for all samples. The order is the same as the order of entries in matrix.mtx
+genes.tsv contains the name associated with each measured gene. The order is the same as the order of entries in matrix.mtx
+    </Data-Processing>
+    <Platform-Ref ref="GPL19057" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NextSeq 500</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN08975393" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX3989979" />
+  </Sample>
+
+  <Sample iid="GSM3109256">
+    <Status database="GEO">
+      <Submission-Date>2018-04-24</Submission-Date>
+      <Release-Date>2018-11-01</Release-Date>
+      <Last-Update-Date>2018-11-01</Last-Update-Date>
+    </Status>
+    <Title>scRNAseq of cells from the preoptic region of a pool of three male mice: Replicate 1</Title>
+    <Accession database="GEO">GSM3109256</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Preoptic region of the hypothalamus</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+brain
+      </Characteristics>
+      <Characteristics tag="brain region">
+Preoptic region of the hypothalamus
+      </Characteristics>
+      <Characteristics tag="Sex">
+male
+      </Characteristics>
+      <Treatment-Protocol>
+Mice were housed individually for 3 days prior to sampling
+      </Treatment-Protocol>
+      <Growth-Protocol>
+Mice were between 60 and 70 PND
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+The preoptic region of the hypothalamus was dissected from freshly prepared brains, dissociated into individual cells via protease treatement, FACS sorted to enrich live cells, and then prepared using the 10X Chromium protocols.
+Libraries were constructed following the instructions of the 10xGenomics Chromium platform
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Processed data are contained with the matrix.mtx file and correspond to all cell names that end with -4
+    </Description>
+    <Data-Processing>
+Construction of fastq files using cellranger (v2.0.0) mkfastq command
+Alignment of files to reference genome using cellranger (v2.0.0) count
+Aggregation of multiple samples using cellranger (v2.0.0) aggr
+Genome_build: mm10-1.2.0
+Supplementary_files_format_and_content: matrix.mtx contains the aggreggated counts from all samples
+barcodes.tsv contains the name associated with each cell for all samples. The order is the same as the order of entries in matrix.mtx
+genes.tsv contains the name associated with each measured gene. The order is the same as the order of entries in matrix.mtx
+    </Data-Processing>
+    <Platform-Ref ref="GPL19057" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NextSeq 500</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN08975392" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX3989980" />
+  </Sample>
+
+  <Sample iid="GSM3109257">
+    <Status database="GEO">
+      <Submission-Date>2018-04-24</Submission-Date>
+      <Release-Date>2018-11-01</Release-Date>
+      <Last-Update-Date>2018-11-01</Last-Update-Date>
+    </Status>
+    <Title>scRNAseq of cells from the preoptic region of a pool of three male mice: Replicate 2</Title>
+    <Accession database="GEO">GSM3109257</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Preoptic region of the hypothalamus</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+brain
+      </Characteristics>
+      <Characteristics tag="brain region">
+Preoptic region of the hypothalamus
+      </Characteristics>
+      <Characteristics tag="Sex">
+male
+      </Characteristics>
+      <Treatment-Protocol>
+Mice were housed individually for 3 days prior to sampling
+      </Treatment-Protocol>
+      <Growth-Protocol>
+Mice were between 60 and 70 PND
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+The preoptic region of the hypothalamus was dissected from freshly prepared brains, dissociated into individual cells via protease treatement, FACS sorted to enrich live cells, and then prepared using the 10X Chromium protocols.
+Libraries were constructed following the instructions of the 10xGenomics Chromium platform
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Processed data are contained with the matrix.mtx file and correspond to all cell names that end with -5
+    </Description>
+    <Data-Processing>
+Construction of fastq files using cellranger (v2.0.0) mkfastq command
+Alignment of files to reference genome using cellranger (v2.0.0) count
+Aggregation of multiple samples using cellranger (v2.0.0) aggr
+Genome_build: mm10-1.2.0
+Supplementary_files_format_and_content: matrix.mtx contains the aggreggated counts from all samples
+barcodes.tsv contains the name associated with each cell for all samples. The order is the same as the order of entries in matrix.mtx
+genes.tsv contains the name associated with each measured gene. The order is the same as the order of entries in matrix.mtx
+    </Data-Processing>
+    <Platform-Ref ref="GPL19057" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NextSeq 500</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN08975391" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX3989981" />
+  </Sample>
+
+  <Sample iid="GSM3109258">
+    <Status database="GEO">
+      <Submission-Date>2018-04-24</Submission-Date>
+      <Release-Date>2018-11-01</Release-Date>
+      <Last-Update-Date>2018-11-01</Last-Update-Date>
+    </Status>
+    <Title>scRNAseq of cells from the preoptic region of a pool of three male mice: Replicate 3</Title>
+    <Accession database="GEO">GSM3109258</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>Preoptic region of the hypothalamus</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+brain
+      </Characteristics>
+      <Characteristics tag="brain region">
+Preoptic region of the hypothalamus
+      </Characteristics>
+      <Characteristics tag="Sex">
+male
+      </Characteristics>
+      <Treatment-Protocol>
+Mice were housed individually for 3 days prior to sampling
+      </Treatment-Protocol>
+      <Growth-Protocol>
+Mice were between 60 and 70 PND
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+The preoptic region of the hypothalamus was dissected from freshly prepared brains, dissociated into individual cells via protease treatement, FACS sorted to enrich live cells, and then prepared using the 10X Chromium protocols.
+Libraries were constructed following the instructions of the 10xGenomics Chromium platform
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Processed data are contained with the matrix.mtx file and correspond to all cell names that end with -6
+    </Description>
+    <Data-Processing>
+Construction of fastq files using cellranger (v2.0.0) mkfastq command
+Alignment of files to reference genome using cellranger (v2.0.0) count
+Aggregation of multiple samples using cellranger (v2.0.0) aggr
+Genome_build: mm10-1.2.0
+Supplementary_files_format_and_content: matrix.mtx contains the aggreggated counts from all samples
+barcodes.tsv contains the name associated with each cell for all samples. The order is the same as the order of entries in matrix.mtx
+genes.tsv contains the name associated with each measured gene. The order is the same as the order of entries in matrix.mtx
+    </Data-Processing>
+    <Platform-Ref ref="GPL19057" />
+    <Library-Strategy>RNA-Seq</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>cDNA</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NextSeq 500</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN08975390" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX3989982" />
+  </Sample>
+
+  <Series iid="GSE113576">
+    <Status database="GEO">
+      <Submission-Date>2018-04-24</Submission-Date>
+      <Release-Date>2018-11-01</Release-Date>
+      <Last-Update-Date>2019-03-25</Last-Update-Date>
+    </Status>
+    <Title>Molecular, Spatial and Functional Single-Cell Profiling of the Hypothalamic Preoptic Region</Title>
+    <Accession database="GEO">GSE113576</Accession>
+    <Pubmed-ID>30385464</Pubmed-ID>
+    <Summary>
+Single-cell RNA sequencing of ~31,000 cells dissociated and captured from the preoptic region of the hypothalamus from multiple male and female mice
+    </Summary>
+    <Overall-Design>
+Three replicates each of male and female mice
+    </Overall-Design>
+    <Type>Expression profiling by high throughput sequencing</Type>
+    <Contributor-Ref ref="contrib1" position="1" />
+    <Contributor-Ref ref="contrib3" position="2" />
+    <Contact-Ref ref="contrib1" />
+    <Sample-Ref ref="GSM3109253" />
+    <Sample-Ref ref="GSM3109254" />
+    <Sample-Ref ref="GSM3109255" />
+    <Sample-Ref ref="GSM3109256" />
+    <Sample-Ref ref="GSM3109257" />
+    <Sample-Ref ref="GSM3109258" />
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE113nnn/GSE113576/suppl/GSE113576_barcodes.tsv.gz
+    </Supplementary-Data>
+    <Supplementary-Data type="TSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE113nnn/GSE113576/suppl/GSE113576_genes.tsv.gz
+    </Supplementary-Data>
+    <Supplementary-Data type="MTX">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE113nnn/GSE113576/suppl/GSE113576_matrix.mtx.gz
+    </Supplementary-Data>
+    <Relation type="BioProject" target="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA453138" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRP142447" />
+  </Series>
+
+</MINiML>
